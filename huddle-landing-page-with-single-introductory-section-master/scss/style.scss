@@ -1,0 +1,117 @@
+$tim: hsl(257, 40%, 49%);
+$hong: hsl(300, 69%, 71%);
+@mixin hoverEffect($color){
+    background-color:$color;
+    color:white;
+}
+body {
+    background-color: $tim;
+    margin: 0;
+}
+.container {
+    background-image: url("../images/bg-mobile.svg");
+    background-repeat: no-repeat;
+}
+header {
+    width: 90%;
+    margin: auto; 
+}
+img {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.logo {
+    width: 150px;
+    height: 50px;
+}
+main {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+
+    h1 {
+        font-size: x-large;
+    }
+
+    p {
+        font-size: medium;
+    }
+
+    button {
+        font-family: 'Poppins',sans-serif;
+        background-color: white;
+        color: $tim;
+        width: 75%;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        margin: auto;
+        box-shadow: 5px 5px 10px black;
+        transition: 0.5s;
+    }
+
+    button:hover {
+        @include hoverEffect(#ED459E);
+    }
+}
+
+footer {
+    width: 75%;
+    margin: 50px auto;
+}
+
+li {
+    width: 20px;
+    height: 20px;
+    color: white;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+li:hover {
+    @include hoverEffect(#45BAED);
+}
+@media screen and (min-width:768px){
+    body {
+        background-image:url("../images/bg-desktop.svg");
+        background-repeat:no-repeat;
+    }
+    header {
+         float:left;
+         width:50%;
+         img {
+             margin:0 50px;
+         }
+    .logo{
+        width:200px;
+        height:200px;
+    }
+     }
+    main{
+        width:40%;
+        float:right;
+        margin:200px 5px;
+        text-align:left;
+        button{
+            width:35%;
+            height:50px;
+        }
+        h1{
+            font-size:40px;
+        }
+    }
+    footer{
+        position:absolute;
+        right:10%;
+        bottom:0;
+        li{
+            float:right;
+        }
+    }
+}
